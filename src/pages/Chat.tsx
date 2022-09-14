@@ -7,14 +7,13 @@ import request from "../services/requests";
 import Pusher from "pusher-js";
 import { motion } from "framer-motion";
 
-interface usertype {
-  username: string;
-  token: string;
-}
+// interface usertype {
+//   username: string;
+//   token: string;
+// }
 const Chat = () => {
   const [user, setUser] = React.useState("");
   const [messages, setMessages] = React.useState(Array<messagetype>());
-  const [users, setUsers] = React.useState(Array<usertype>());
   React.useLayoutEffect(() => {
     let user = localStorage.getItem("user");
     if (user !== "" && user !== null) {
